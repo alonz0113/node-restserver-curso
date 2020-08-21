@@ -21,7 +21,7 @@ app.use(require('./routes/index'));
 
 
 
-mongoose.connect(process.env.urlDB, { useNewUrlParser: true, useCreateIndex: true },
+mongoose.connect(process.env.urlDB, { useNewUrlParser: true, useCreateIndex: true, autoIndex: true },
     (err, res) => {
 
         if (err) throw err;

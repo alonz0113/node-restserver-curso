@@ -41,7 +41,7 @@ let usuarioSchema = new Schema({
     }
 });
 
-
+// Exclusion de la contrasena del modelo
 usuarioSchema.methods.toJSON = function() {
 
     let user = this;
@@ -49,7 +49,8 @@ usuarioSchema.methods.toJSON = function() {
     delete userObject.password;
 
     return userObject;
-}
+};
+
 
 usuarioSchema.plugin(uniqueValidator, {
     message: '{PATH} debe de ser unico'
